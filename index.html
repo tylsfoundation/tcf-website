@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyls Charitable Foundation | Internal Draft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --tcf-blue: #1e3a8a;
+            --tcf-green: #15803d;
+            --tcf-yellow: #facc15;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        .nav-link:hover { color: var(--tcf-green); }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <nav class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center text-white text-2xl">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="block text-xl font-bold text-blue-900 tracking-tight">TCF</span>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-slate-500">Tyls Charitable Foundation</span>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-8 font-medium">
+                <button onclick="showPage('home')" class="nav-link">Home</button>
+                <button onclick="showPage('hunger')" class="nav-link">Fighting Hunger</button>
+                <button onclick="showPage('futures')" class="nav-link">Building Futures</button>
+            </div>
+            <button class="bg-green-700 text-white px-6 py-2 rounded-full font-bold hover:bg-green-800 transition">Volunteer</button>
+        </div>
+    </nav>
+
+    <div id="home" class="tab-content active">
+        <header class="hero-gradient py-20 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-black text-blue-900 mb-6">Growing Stomachs. <span class="text-green-700 text-opacity-80">Growing Minds.</span></h1>
+                <p class="text-xl text-slate-600 mb-10 leading-relaxed">Empowering our community one meal and one dream at a time. A foundation built on the belief that a bright future begins with a full stomach.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="showPage('hunger')" class="bg-blue-900 text-white px-8 py-4 rounded-lg font-bold shadow-lg hover:-translate-y-1 transition">The Food Pantry Mission</button>
+                    <button onclick="showPage('futures')" class="bg-white text-blue-900 border-2 border-blue-900 px-8 py-4 rounded-lg font-bold shadow-lg hover:-translate-y-1 transition">Educational Programs</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="py-16 max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-blue-50 p-8 rounded-2xl border-l-8 border-blue-900 shadow-sm">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-4">The Impact Trajectory</h3>
+                    <p class="text-slate-700 leading-relaxed">From 8 to 15, we provide the nutrition and stability needed to focus in class. By 18, we provide the trade skills and STEM mentorship to ensure every child walks across the stage with a plan.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center">
+                        <i class="fas fa-hand-holding-heart text-3xl text-green-600 mb-3"></i>
+                        <div class="text-2xl font-bold">100%</div>
+                        <div class="text-sm text-slate-500 font-medium">Local Impact</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100 text-center">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-800 mb-3"></i>
+                        <div class="text-2xl font-bold">8-15</div>
+                        <div class="text-sm text-slate-500 font-medium">Primary Focus</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="hunger" class="tab-content py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black text-blue-900 mb-8 border-b-4 border-green-500 inline-block">Fighting Hunger</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-xl space-y-6">
+                <p class="text-lg text-slate-700">In Southern New Hampshire, food insecurity is often invisible. The TCF Food Pantry is a judgment-free resource for families to ensure the foundation of every child's success—proper nutrition—is met.</p>
+                <div class="grid md:grid-cols-2 gap-6 pt-6">
+                    <div class="bg-slate-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-green-800 mb-2 underline decoration-yellow-400">Pantry Operations</h4>
+                        <p class="text-sm text-slate-600">Distribution centers and community meals across Bedford and Manchester.</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl">
+                        <h4 class="font-bold text-green-800 mb-2 underline decoration-yellow-400">Nutritional Support</h4>
+                        <p class="text-sm text-slate-600">Balanced meals specifically designed for growing students and active families.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="futures" class="tab-content py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-black text-blue-900 mb-8 border-b-4 border-yellow-400 inline-block">Building Futures</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-xl">
+                <p class="text-lg text-slate-700 mb-8 font-medium">We don't just feed the present; we fuel the future. Our educational pillar focuses on STEM, trades, and business mentorship.</p>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 border-l-4 border-blue-900 bg-blue-50">
+                        <span class="bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">1</span>
+                        <p class="text-slate-700"><strong>Trade Skills:</strong> Connecting young adults with masters in plumbing, electrical, and carpentry.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 border-l-4 border-blue-900 bg-blue-50">
+                        <span class="bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">2</span>
+                        <p class="text-slate-700"><strong>STEM Academies:</strong> Coding, robotics, and analytical thinking for the next generation of tech leaders.</p>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 border-l-4 border-blue-900 bg-blue-50">
+                        <span class="bg-blue-900 text-white w-8 h-8 rounded-full flex items-center justify-center shrink-0">3</span>
+                        <p class="text-slate-700"><strong>Business Mentorship:</strong> Teaching the fundamentals of entrepreneurship and financial literacy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-white py-12 px-4 mt-20">
+        <div class="max-w-6xl mx-auto text-center md:text-left flex flex-col md:flex-row justify-between items-center opacity-60">
+            <div>
+                <p class="text-sm font-bold mb-1 italic">INTERNAL DRAFT V1.0 - CONCEPT PREVIEW</p>
+                <p class="text-xs">Tyls Charitable Foundation &copy; 2026. All rights reserved.</p>
+            </div>
+            <div class="mt-4 md:mt-0 text-xs">
+                <p>Host: Vercel Edge Network</p>
+                <p>Management: GitHub CI/CD Pipeline</p>
+                <p>Automation Ready: n8n.io Integrated</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
