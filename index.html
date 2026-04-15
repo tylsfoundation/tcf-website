@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tyls Charitable Foundation | Internal Draft v1.1</title>
+    <title>Tyls Charitable Foundation | Internal Draft v1.3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -29,9 +29,18 @@
             transition: width 0.3s;
         }
         .nav-link:hover::after { width: 100%; }
+        /* Hero Banner Aspect Ratio (Widescreen 21:9) */
+        .tcf-banner {
+            aspect-ratio: 21 / 9;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="text-slate-200 font-sans">
+
+    <header class="w-full bg-slate-950">
+        <img src="./tcf-banner.png" alt="Tyls Charitable Foundation: From Meal to Future" class="w-full tcf-banner shadow-2xl">
+    </header>
 
     <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
         <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
@@ -41,6 +50,7 @@
                 </div>
                 <div class="leading-tight">
                     <span class="block text-xl font-black text-white tracking-tighter italic">TCF</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">Tyls Charitable Foundation</span>
                 </div>
             </div>
 
@@ -58,22 +68,22 @@
     </nav>
 
     <div id="home" class="tab-content active animate-in fade-in duration-700">
-        <header class="py-24 px-4 bg-gradient-to-b from-slate-900 to-slate-950">
+        <header class="py-20 px-4">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-black mb-8 leading-tight tracking-tight">
+                <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight tracking-tight">
                     <span class="text-white">Growing Stomachs.</span><br>
                     <span class="text-green-500">Growing Minds.</span>
                 </h1>
-                <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto">Empowering our community one meal and one dream at a time. A foundation built on the belief that a bright future begins with a full stomach.</p>
+                <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">Empowering our community one meal and one dream at a time. A foundation built on the belief that a bright future begins with a full stomach.</p>
                 <div class="flex flex-wrap justify-center gap-4">
-                    <button onclick="showPage('hunger')" class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition backdrop-blur-sm">Our Food Pantry</button>
+                    <button onclick="showPage('hunger')" class="bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition backdrop-blur-sm">Food Pantry Mission</button>
                     <button onclick="showPage('futures')" class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-500 transition shadow-lg shadow-green-900/20">Educational Programs</button>
                 </div>
             </div>
         </header>
 
-        <section class="py-20 max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-12">
+        <section class="py-16 max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="bg-slate-800/50 p-10 rounded-3xl border border-slate-700 shadow-2xl">
                     <h3 class="text-2xl font-bold text-white mb-6">The Impact Trajectory</h3>
                     <p class="text-slate-400 leading-relaxed mb-6">From 8 to 15, we provide the nutrition and stability needed to focus. By 18, we provide the STEM mentorship and trade skills to ensure every child has a path.</p>
@@ -88,52 +98,60 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex items-center justify-center">
-                    <div class="relative">
-                        <div class="text-9xl text-yellow-400 opacity-20"><i class="fas fa-seedling"></i></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                             <i class="fas fa-tint text-4xl text-blue-500 animate-bounce"></i>
-                        </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 text-center">
+                        <i class="fas fa-hand-holding-heart text-3xl text-green-600 mb-3"></i>
+                        <div class="text-2xl font-bold text-white">TCF</div>
+                        <div class="text-[10px] text-slate-500 uppercase font-medium tracking-widest">Food Pantry</div>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-xl border border-slate-800 text-center">
+                        <i class="fas fa-tools text-3xl text-blue-500 mb-3"></i>
+                        <div class="text-2xl font-bold text-white">STEM/TRADES</div>
+                        <div class="text-[10px] text-slate-500 uppercase font-medium tracking-widest">Educational Focus</div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <div id="hunger" class="tab-content py-20 px-4 text-center">
-        <h2 class="text-3xl font-bold text-white">Fighting Hunger</h2>
-        <p class="text-slate-400 mt-4">Details on the Southern NH Food Pantry initiatives.</p>
+    <div id="hunger" class="tab-content py-24 px-4 text-center">
+        <h2 class="text-4xl font-bold text-white">Fighting Hunger</h2>
+        <p class="text-xl text-slate-400 mt-6 max-w-xl mx-auto">The TCF Food Pantry ensures the foundation of every child's success—proper nutrition—is met with dignity. We focus on balanced meals for Southern NH families.</p>
     </div>
-    <div id="futures" class="tab-content py-20 px-4 text-center">
-        <h2 class="text-3xl font-bold text-white">Building Futures</h2>
-        <p class="text-slate-400 mt-4">Exploring trade skills and STEM mentorship programs.</p>
+    <div id="futures" class="tab-content py-24 px-4 text-center">
+        <h2 class="text-4xl font-bold text-white">Building Futures</h2>
+        <p class="text-xl text-slate-400 mt-6 max-w-xl mx-auto">Connecting young adults (ages 8-15) with STEM, trade skills, and mentorship to create actionable career paths and entrepreneurial skills.</p>
     </div>
-    <div id="volunteer" class="tab-content py-20 px-4 text-center">
-        <h2 class="text-3xl font-bold text-white">Volunteer With TCF</h2>
-        <p class="text-slate-400 mt-4">Join our mission as a mentor or coordinator.</p>
+    <div id="volunteer" class="tab-content py-24 px-4 text-center">
+        <h2 class="text-4xl font-bold text-white">Volunteer With TCF</h2>
+        <p class="text-xl text-slate-400 mt-6 max-w-xl mx-auto">Your time is invaluable. Join our mission as a mentor, coordinator, or pantry support specialist.</p>
     </div>
 
     <footer class="border-t border-slate-800 bg-slate-950 py-16 px-4">
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-500">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-slate-600">
             <div class="mb-8 md:mb-0">
-                <span class="text-white font-black italic tracking-tighter">TCF DRAFT 1.1</span>
-                <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
+                <span class="text-white font-black italic tracking-tighter">TCF DRAFT 1.3</span>
+                <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation (Southern NH)</p>
             </div>
-            <div class="flex gap-8 text-[10px] uppercase font-bold tracking-widest">
-                <span>Vercel Hosted</span>
-                <span>GitHub Managed</span>
-                <span>n8n Integrated</span>
+            <div class="flex gap-6 text-[10px] uppercase font-bold tracking-widest">
+                <span><i class="fas fa-cloud text-blue-800 mr-2"></i> Vercel</span>
+                <span><i class="fab fa-github text-blue-800 mr-2"></i> GitHub</span>
+                <span><i class="fas fa-brain text-blue-800 mr-2"></i> Agentic Ready</span>
             </div>
         </div>
     </footer>
 
     <script>
         function showPage(pageId) {
+            // Hide all tab contents
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
+            // Show selected page
             document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0, 0);
+            // Scroll to navigation, not top, to keep menu visible
+            const navPosition = document.querySelector('nav').offsetTop;
+            window.scrollTo(0, navPosition);
         }
     </script>
 </body>
