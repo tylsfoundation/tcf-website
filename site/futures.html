@@ -1,0 +1,145 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Futures | Tyls Charitable Foundation</title>
+
+    <!-- Tailwind (portable CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="text-slate-200 font-sans">
+
+    <!-- Banner -->
+    <header class="w-full bg-slate-950 flex justify-center">
+        <div class="banner-container shadow-2xl">
+            <img src="/assets/tcf-banner.png" alt="Tyls Charitable Foundation Banner" class="tcf-banner-img">
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="/index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center text-slate-900 shadow-lg">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div class="leading-tight">
+                    <span class="block text-xl font-black text-white tracking-tighter italic">TCF</span>
+                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
+                        Tyls Charitable Foundation
+                    </span>
+                </div>
+            </a>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex gap-8 items-center font-medium text-sm uppercase tracking-widest text-slate-400">
+                <a href="/index.html" class="nav-link hover:text-white">Home</a>
+                <a href="/hunger.html" class="nav-link hover:text-white">Fighting Hunger</a>
+                <a href="/futures.html" class="nav-link text-white">Building Futures</a>
+                <a href="/volunteer.html" class="nav-link hover:text-white">Volunteer</a>
+                <a href="/partners.html" class="nav-link hover:text-white">Partners</a>
+            </div>
+
+            <!-- CTA -->
+            <a href="/donate.html" class="bg-yellow-400 text-slate-900 px-6 py-2 rounded-full font-black text-xs uppercase tracking-tighter hover:bg-yellow-300 transition-all shadow-xl active:scale-95">
+                Donate Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-20 px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">
+            Building Futures
+        </h1>
+        <p class="text-lg text-slate-400 italic max-w-2xl mx-auto">
+            Empowering individuals with the skills, education, and opportunities needed to build sustainable careers and stronger communities.
+        </p>
+    </section>
+
+    <!-- Main Content -->
+    <section class="max-w-5xl mx-auto px-4 pb-20">
+        <div class="bg-slate-800/50 border border-slate-700 p-12 rounded-[3rem] shadow-2xl text-center">
+
+            <p class="text-2xl md:text-3xl text-white font-bold italic leading-relaxed mb-10">
+                "We empower individuals through business, STEM, and trades education—turning ambition into opportunity and opportunity into careers."
+            </p>
+
+            <!-- Program Areas -->
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+
+                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
+                    <h3 class="text-white font-bold text-lg mb-2">Business Education</h3>
+                    <p class="text-slate-400 text-sm">
+                        Providing foundational knowledge and mentorship to help individuals launch and grow successful careers in business.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
+                    <h3 class="text-white font-bold text-lg mb-2">STEM Pathways</h3>
+                    <p class="text-slate-400 text-sm">
+                        Supporting access to science, technology, engineering, and math education to open doors to high-demand careers.
+                    </p>
+                </div>
+
+                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
+                    <h3 class="text-white font-bold text-lg mb-2">Skilled Trades</h3>
+                    <p class="text-slate-400 text-sm">
+                        Creating opportunities in trades through hands-on learning, certifications, and real-world experience.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Future Vision Section -->
+    <section class="max-w-4xl mx-auto px-4 pb-20 text-center">
+        <div class="bg-slate-800/30 border border-slate-700 p-10 rounded-3xl">
+            <h2 class="text-2xl font-bold text-white mb-4">Looking Ahead</h2>
+            <p class="text-slate-400 leading-relaxed">
+                Our goal is to build a network of opportunities that connects education, mentorship, and real-world experience.
+                By partnering with local businesses and organizations, we aim to create clear pathways from learning to employment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="text-center pb-20 px-4">
+        <h2 class="text-2xl font-bold text-white mb-4">
+            Be Part of the Future
+        </h2>
+        <p class="text-slate-400 mb-6">
+            Whether you’re a mentor, partner, or volunteer, your involvement helps shape the next generation.
+        </p>
+
+        <a href="/volunteer.html" class="bg-green-500 text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-green-400 transition">
+            Get Involved
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center text-slate-600">
+            <span class="text-white font-black italic">TCF</span>
+            <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+
+</body>
+</html>
+```
