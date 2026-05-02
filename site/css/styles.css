@@ -1,0 +1,139 @@
+```css
+/* ===============================
+   TCF Global Styles
+   =============================== */
+
+/* Theme Variables */
+:root {
+    --midnight: #0f172a;
+    --tcf-green: #22c55e;
+    --tcf-yellow: #facc15;
+}
+
+/* Base */
+body {
+    background-color: var(--midnight);
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   Banner
+   =============================== */
+
+.banner-container {
+    width: 1024px;
+    height: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.tcf-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Responsive banner */
+@media (max-width: 1024px) {
+    .banner-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .tcf-banner-img {
+        height: auto;
+    }
+}
+
+/* ===============================
+   Navigation
+   =============================== */
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* underline animation */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--tcf-yellow);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===============================
+   Form Elements
+   =============================== */
+
+input,
+select,
+textarea {
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--tcf-green);
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.25);
+}
+
+/* ===============================
+   Buttons
+   =============================== */
+
+button {
+    transition: all 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===============================
+   Cards / Sections
+   =============================== */
+
+.card-hover {
+    transition: all 0.25s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    border-color: var(--tcf-green);
+}
+
+/* ===============================
+   Utility Tweaks
+   =============================== */
+
+/* smoother text rendering */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* better link behavior */
+a {
+    text-decoration: none;
+}
+
+/* spacing consistency for sections */
+section {
+    scroll-margin-top: 100px;
+}
+```
