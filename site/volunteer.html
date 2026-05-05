@@ -1,159 +1,170 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer | Tyls Charitable Foundation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Volunteer | Tyls Charitable Foundation</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body class="text-slate-200 font-sans">
+<body class="bg-slate-950 text-white font-sans">
 
-    <!-- Banner -->
-    <header class="w-full bg-slate-950 flex justify-center">
-        <div class="banner-container shadow-2xl">
-            <img src="../assets/tcf-banner.png" alt="TCF Banner" class="tcf-banner-img">
+  <!-- Banner -->
+  <header class="w-full bg-slate-950 flex justify-center">
+    <div class="banner-container shadow-2xl">
+      <img src="../assets/tcf-banner.png" alt="Tyls Charitable Foundation Banner" class="tcf-banner-img">
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-slate-900 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="./index.html" class="font-black text-xl italic text-white">TCF</a>
+
+      <div class="hidden md:flex gap-6 text-sm uppercase tracking-wide text-slate-300">
+        <a href="./index.html" class="hover:text-yellow-400">Home</a>
+        <a href="./volunteer.html" class="text-yellow-400">Volunteer</a>
+        <a href="./donate.html" class="hover:text-yellow-400">Donate</a>
+        <a href="./about.html" class="hover:text-yellow-400">About Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="max-w-4xl mx-auto px-6 pt-8 pb-8 text-center">
+      <h1 class="text-xl md:text-2xl font-bold mb-3">
+        Volunteer
+      </h1>
+      <p class="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        Help us build a reliable food pickup and delivery network.
+      </p>
+    </section>
+
+    <!-- Main Volunteer Section -->
+    <section class="max-w-5xl mx-auto px-6 pb-14">
+      <div class="grid md:grid-cols-2 gap-6 items-stretch">
+
+        <!-- Volunteer Description -->
+        <div class="bg-white text-slate-900 p-6 rounded-xl shadow-md h-full">
+          <h2 class="text-lg font-bold mb-3">
+            We need drivers and helpers.
+          </h2>
+
+          <p class="text-sm leading-relaxed mb-3">
+            Right now, food pickups often depend on one person. When that person is unavailable,
+            donated food may not get where it needs to go.
+          </p>
+
+          <p class="text-sm leading-relaxed mb-3">
+            Volunteers can help by picking up donated food from stores and delivering it to
+            local food pantries and community partners.
+          </p>
+
+          <p class="text-sm leading-relaxed">
+            Even one pickup can make a difference.
+          </p>
         </div>
-    </header>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <!-- Volunteer Form -->
+        <div class="bg-white text-slate-900 p-6 rounded-xl shadow-md h-full">
+          <h2 class="text-lg font-bold mb-4">
+            Sign Up to Volunteer
+          </h2>
 
-            <!-- Logo -->
-            <a href="/index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center text-slate-900 shadow-lg">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <div class="leading-tight">
-                    <span class="block text-xl font-black text-white tracking-tighter italic">TCF</span>
-                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
-                        Tyls Charitable Foundation
-                    </span>
-                </div>
-            </a>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
 
-            <!-- Nav Links -->
-            <div class="hidden md:flex gap-8 items-center font-medium text-sm uppercase tracking-widest text-slate-400">
-                <a href="/index.html" class="nav-link hover:text-white">Home</a>
-                <a href="/hunger.html" class="nav-link hover:text-white">Fighting Hunger</a>
-                <a href="/futures.html" class="nav-link hover:text-white">Building Futures</a>
-                <a href="/volunteer.html" class="nav-link text-white">Volunteer</a>
-                <a href="/partners.html" class="nav-link hover:text-white">Partners</a>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="name">Name</label>
+              <input 
+                id="name"
+                type="text" 
+                name="name" 
+                required
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              >
             </div>
 
-            <!-- CTA -->
-            <a href="/donate.html" class="bg-yellow-400 text-slate-900 px-6 py-2 rounded-full font-black text-xs uppercase tracking-tighter hover:bg-yellow-300 transition-all shadow-xl active:scale-95">
-                Donate Now
-            </a>
-        </div>
-    </nav>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="email">Email</label>
+              <input 
+                id="email"
+                type="email" 
+                name="email" 
+                required
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              >
+            </div>
 
-    <!-- Header -->
-    <section class="py-20 px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">
-            Volunteer With Us
-        </h1>
-        <p class="text-lg text-slate-400 italic max-w-2xl mx-auto">
-            Join our mission and help make a direct impact in your community.
-        </p>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="phone">Phone</label>
+              <input 
+                id="phone"
+                type="tel" 
+                name="phone"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              >
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="town">Town / Area</label>
+              <input 
+                id="town"
+                type="text" 
+                name="town"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              >
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="interest">How would you like to help?</label>
+              <select 
+                id="interest"
+                name="interest"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              >
+                <option value="">Select one</option>
+                <option value="Food pickup / delivery driver">Food pickup / delivery driver</option>
+                <option value="Scheduling / coordination">Scheduling / coordination</option>
+                <option value="Store or pantry outreach">Store or pantry outreach</option>
+                <option value="General volunteer support">General volunteer support</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="message">Message</label>
+              <textarea 
+                id="message"
+                name="message"
+                rows="4"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
+              ></textarea>
+            </div>
+
+            <p class="text-xs text-slate-600 leading-relaxed">
+              Note: When needed, basic fuel costs may be offset for approved pickup and delivery volunteers.
+            </p>
+
+            <button 
+              type="submit"
+              class="w-full bg-green-500 hover:bg-green-400 text-white px-6 py-3 rounded-full font-bold uppercase tracking-wide text-sm"
+            >
+              Submit Volunteer Form
+            </button>
+
+          </form>
+        </div>
+
+      </div>
     </section>
+  </main>
 
-    <!-- Form Section -->
-    <section class="max-w-2xl mx-auto px-4 pb-20">
-        <div class="bg-slate-800/50 border border-slate-700 p-10 rounded-3xl shadow-2xl">
-
-            <form id="volunteerForm" class="space-y-5">
-
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Full Name" 
-                    required 
-                    class="w-full p-3 rounded bg-slate-900 border border-slate-700"
-                >
-
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="Email Address" 
-                    required 
-                    class="w-full p-3 rounded bg-slate-900 border border-slate-700"
-                >
-
-                <select 
-                    name="interest" 
-                    class="w-full p-3 rounded bg-slate-900 border border-slate-700"
-                >
-                    <option value="">Area of Interest</option>
-                    <option value="marketing">Marketing</option>
-                    <option value="food_pantry">Food Pantry</option>
-                    <option value="business_outreach">Business Outreach</option>
-                </select>
-
-                <textarea 
-                    name="message" 
-                    placeholder="Tell us anything you'd like..." 
-                    rows="4"
-                    class="w-full p-3 rounded bg-slate-900 border border-slate-700"
-                ></textarea>
-
-                <button 
-                    type="submit"
-                    class="w-full bg-green-500 text-white py-3 rounded-full font-bold uppercase text-sm hover:bg-green-400 transition"
-                >
-                    Submit
-                </button>
-
-            </form>
-
-            <p id="formStatus" class="mt-4 text-center text-sm text-green-400"></p>
-
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-16 px-4">
-        <div class="max-w-6xl mx-auto text-center text-slate-600">
-            <span class="text-white font-black italic">TCF</span>
-            <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
-        </div>
-    </footer>
-
-    <!-- JS -->
-    <script>
-        document.getElementById("volunteerForm").addEventListener("submit", async function(e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const data = Object.fromEntries(new FormData(form));
-
-            try {
-                await fetch("https://YOUR-ENDPOINT.com/volunteer", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(data)
-                });
-
-                document.getElementById("formStatus").innerText = "Thank you for volunteering!";
-                form.reset();
-            } catch (err) {
-                document.getElementById("formStatus").innerText = "Submission failed. Please try again.";
-            }
-        });
-    </script>
+  <footer class="border-t border-slate-800 bg-slate-950 py-10 px-4 text-center text-slate-400">
+    <p class="font-black italic text-white">TCF</p>
+    <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
+  </footer>
 
 </body>
 </html>
-```
