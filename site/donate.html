@@ -1,136 +1,126 @@
-```html id="d9p3vk"
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate | Tyls Charitable Foundation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate | Tyls Charitable Foundation</title>
 
-    <!-- Tailwind (portable CDN) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="/css/styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./css/styles.css" />
 </head>
 
-<body class="text-slate-200 font-sans">
+<body class="bg-slate-950 text-white font-sans">
 
-    <!-- Banner -->
-    <header class="w-full bg-slate-950 flex justify-center">
-        <div class="banner-container shadow-2xl">
-            <img src="../assets/tcf-banner.png" alt="TCF Banner" class="tcf-banner-img">
-        </div>
-    </header>
+  <!-- Banner -->
+  <header class="w-full bg-slate-950 flex justify-center">
+    <div class="banner-container shadow-2xl">
+      <img src="../assets/tcf-banner.png" alt="Tyls Charitable Foundation Banner" class="tcf-banner-img">
+    </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+  <!-- Navigation -->
+  <nav class="bg-slate-900 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="./index.html" class="font-black text-xl italic text-white">TCF</a>
 
-            <!-- Logo -->
-            <a href="/index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center text-slate-900 shadow-lg">
-                    <i class="fas fa-seedling"></i>
-                </div>
-                <div class="leading-tight">
-                    <span class="block text-xl font-black text-white tracking-tighter italic">TCF</span>
-                    <span class="text-[10px] text-slate-500 uppercase font-bold tracking-widest">
-                        Tyls Charitable Foundation
-                    </span>
-                </div>
-            </a>
+      <div class="hidden md:flex gap-6 text-sm uppercase tracking-wide text-slate-300">
+        <a href="./index.html" class="hover:text-yellow-400">Home</a>
+        <a href="./volunteer.html" class="hover:text-yellow-400">Volunteer</a>
+        <a href="./donate.html" class="text-yellow-400">Donate</a>
+        <a href="./about.html" class="hover:text-yellow-400">About Us</a>
+      </div>
+    </div>
+  </nav>
 
-            <!-- Nav Links -->
-            <div class="hidden md:flex gap-8 items-center font-medium text-sm uppercase tracking-widest text-slate-400">
-                <a href="/index.html" class="nav-link hover:text-white">Home</a>
-                <a href="/hunger.html" class="nav-link hover:text-white">Fighting Hunger</a>
-                <a href="/futures.html" class="nav-link hover:text-white">Building Futures</a>
-                <a href="/volunteer.html" class="nav-link hover:text-white">Volunteer</a>
-                <a href="/partners.html" class="nav-link hover:text-white">Partners</a>
-            </div>
-
-            <!-- CTA (active) -->
-            <a href="/donate.html" class="bg-yellow-400 text-slate-900 px-6 py-2 rounded-full font-black text-xs uppercase tracking-tighter shadow-xl">
-                Donate Now
-            </a>
-        </div>
-    </nav>
+  <main>
 
     <!-- Header -->
-    <section class="py-20 px-4 text-center">
-        <h1 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-6">
-            Support Our Mission
-        </h1>
-        <p class="text-lg text-slate-400 italic max-w-2xl mx-auto">
-            Your contribution helps us provide meals, create opportunities, and strengthen our community.
-        </p>
+    <section class="max-w-4xl mx-auto px-6 pt-8 pb-8 text-center">
+      <h1 class="text-xl md:text-2xl font-bold mb-3">
+        Support the Work
+      </h1>
+      <p class="text-sm md:text-base text-slate-300 max-w-2xl mx-auto">
+        Your support helps turn a one-person effort into a reliable food delivery network.
+      </p>
     </section>
 
-    <!-- Donation Options -->
-    <section class="max-w-4xl mx-auto px-4 pb-20">
-        <div class="bg-slate-800/50 border border-slate-700 p-12 rounded-[3rem] shadow-2xl text-center">
+    <!-- Main Section -->
+    <section class="max-w-5xl mx-auto px-6 pb-14">
+      <div class="grid md:grid-cols-2 gap-6 items-start">
 
-            <h2 class="text-2xl font-bold text-white mb-6">
-                Choose Your Impact
-            </h2>
+        <!-- Where Money Goes -->
+        <div class="bg-white text-slate-900 p-6 rounded-xl shadow-md max-w-md">
+          <h2 class="text-base font-bold mb-3">
+            Where your support goes
+          </h2>
 
-            <div class="grid md:grid-cols-3 gap-6 mb-10">
+          <div class="space-y-2 text-sm leading-relaxed">
+            <p>Fuel and transportation for food pickups</p>
+            <p>Supplies for safe food handling and delivery</p>
+            <p>Filling gaps when pantries need specific items</p>
+            <p>Basic tools to coordinate volunteers and pickups</p>
+          </div>
 
-                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
-                    <h3 class="text-white font-bold text-lg mb-2">$25</h3>
-                    <p class="text-slate-400 text-sm">Provides meals for a family in need.</p>
-                </div>
-
-                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
-                    <h3 class="text-white font-bold text-lg mb-2">$100</h3>
-                    <p class="text-slate-400 text-sm">Supports pantry distribution efforts.</p>
-                </div>
-
-                <div class="p-6 bg-slate-900/60 rounded-2xl border border-slate-700">
-                    <h3 class="text-white font-bold text-lg mb-2">$500+</h3>
-                    <p class="text-slate-400 text-sm">Helps fund long-term community programs.</p>
-                </div>
-
-            </div>
-
-            <!-- Placeholder for real payment integration -->
-            <div class="bg-yellow-400/10 p-8 rounded-2xl border border-yellow-400/30 text-yellow-400 font-bold">
-                Secure donation integration coming soon
-            </div>
-
-            <!-- Optional interim button -->
-            <div class="mt-8">
-                <a href="#" class="inline-block bg-yellow-400 text-slate-900 px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-yellow-300 transition">
-                    Donate Online
-                </a>
-            </div>
-
+          <p class="text-xs text-slate-600 mt-4">
+            Every contribution helps make food delivery more consistent and reliable.
+          </p>
         </div>
+
+        <!-- Contact / Donation Form -->
+        <div class="bg-white text-slate-900 p-6 rounded-xl shadow-md">
+          <h2 class="text-lg font-bold mb-4">
+            Get Involved / Donate
+          </h2>
+
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Name</label>
+              <input type="text" name="name" required
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Email</label>
+              <input type="email" name="email" required
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Interest</label>
+              <select name="interest"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
+                <option value="">Select one</option>
+                <option value="General donation">General donation</option>
+                <option value="Fuel support">Fuel support</option>
+                <option value="Food support">Food support</option>
+                <option value="Partnership">Partnership</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-semibold mb-1">Message</label>
+              <textarea name="message" rows="4"
+                class="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"></textarea>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-yellow-400 hover:bg-yellow-300 text-slate-950 px-6 py-3 rounded-full font-bold uppercase tracking-wide text-sm">
+              Submit
+            </button>
+
+          </form>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Trust / Transparency -->
-    <section class="max-w-3xl mx-auto px-4 pb-20 text-center">
-        <div class="bg-slate-800/30 border border-slate-700 p-10 rounded-3xl">
-            <h2 class="text-2xl font-bold text-white mb-4">Where Your Donation Goes</h2>
-            <p class="text-slate-400 leading-relaxed">
-                We are committed to transparency and impact. Donations directly support food distribution,
-                educational initiatives, and partnerships that strengthen our community.
-            </p>
-        </div>
-    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950 py-16 px-4">
-        <div class="max-w-6xl mx-auto text-center text-slate-600">
-            <span class="text-white font-black italic">TCF</span>
-            <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
-        </div>
-    </footer>
-
-    <script src="/js/main.js"></script>
+  <footer class="border-t border-slate-800 bg-slate-950 py-10 px-4 text-center text-slate-400">
+    <p class="font-black italic text-white">TCF</p>
+    <p class="text-xs mt-2">© 2026 Tyls Charitable Foundation</p>
+  </footer>
 
 </body>
 </html>
-```
