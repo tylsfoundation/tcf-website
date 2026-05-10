@@ -1,0 +1,36 @@
+<svg width="1200" height="820" viewBox="0 0 1200 820" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Food transportation route network</title>
+  <desc id="desc">A modern illustration showing food boxes moving by van from retail donors to food banks and pantries.</desc>
+  <rect width="1200" height="820" rx="44" fill="#E7F4ED"/>
+  <path d="M113 603C221 486 313 574 420 438C536 291 669 337 786 223C879 132 987 131 1088 199" stroke="#176B4D" stroke-width="10" stroke-linecap="round" stroke-dasharray="24 28"/>
+  <circle cx="156" cy="564" r="62" fill="#FFFFFF"/>
+  <circle cx="156" cy="564" r="42" fill="#F5C84B"/>
+  <path d="M132 555H180V587H132V555Z" fill="#15201C"/>
+  <path d="M142 543H170L180 555H132L142 543Z" fill="#176B4D"/>
+  <circle cx="562" cy="357" r="78" fill="#FFFFFF"/>
+  <path d="M492 360H631C645 360 657 372 657 386V428H511C500 428 492 420 492 409V360Z" fill="#176B4D"/>
+  <path d="M657 386H704L735 420V428H657V386Z" fill="#0D3F31"/>
+  <circle cx="546" cy="431" r="22" fill="#15201C"/>
+  <circle cx="696" cy="431" r="22" fill="#15201C"/>
+  <circle cx="546" cy="431" r="9" fill="#F5C84B"/>
+  <circle cx="696" cy="431" r="9" fill="#F5C84B"/>
+  <rect x="515" y="319" width="46" height="38" rx="4" fill="#F5C84B"/>
+  <rect x="568" y="303" width="52" height="54" rx="5" fill="#FFFFFF"/>
+  <path d="M594 303V357" stroke="#DFE8E2" stroke-width="5"/>
+  <circle cx="1016" cy="202" r="68" fill="#FFFFFF"/>
+  <path d="M972 236V185L1016 153L1060 185V236H1033V205H999V236H972Z" fill="#176B4D"/>
+  <path d="M999 236V205H1033V236" stroke="#0D3F31" stroke-width="7" stroke-linejoin="round"/>
+  <rect x="110" y="98" width="300" height="152" rx="22" fill="#FFFFFF"/>
+  <rect x="144" y="131" width="74" height="68" rx="8" fill="#F5C84B"/>
+  <rect x="235" y="132" width="134" height="12" rx="6" fill="#176B4D"/>
+  <rect x="235" y="162" width="103" height="12" rx="6" fill="#DFE8E2"/>
+  <rect x="235" y="192" width="126" height="12" rx="6" fill="#DFE8E2"/>
+  <rect x="787" y="529" width="280" height="140" rx="22" fill="#FFFFFF"/>
+  <rect x="824" y="566" width="56" height="56" rx="9" fill="#176B4D"/>
+  <path d="M837 594H867" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <rect x="900" y="568" width="123" height="12" rx="6" fill="#15201C"/>
+  <rect x="900" y="598" width="91" height="12" rx="6" fill="#DFE8E2"/>
+  <path d="M206 686C348 743 517 708 646 629C733 576 797 569 898 600" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="419" cy="438" r="16" fill="#F5C84B"/>
+  <circle cx="786" cy="223" r="16" fill="#F5C84B"/>
+</svg>

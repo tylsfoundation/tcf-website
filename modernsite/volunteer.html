@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer | Tyls Charitable Foundation</title>
+  <meta name="description" content="Volunteer with Tyls Charitable Foundation to help move donated food across southern New Hampshire.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./index.html">
+      <span class="brand-mark">TCF</span>
+      <span class="brand-text">Tyls Charitable Foundation</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="./index.html">Home</a>
+      <a href="./about.html">What We Do</a>
+      <a href="./volunteer.html" aria-current="page">Volunteer</a>
+      <a class="nav-cta" href="./donate.html">Donate</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero reveal">
+      <p class="eyebrow">Volunteer</p>
+      <h1>Help make food pickup reliable.</h1>
+      <p>We are building a small driver and coordination network for southern New Hampshire. The first need is simple: reliable people who can help move food when pickup opportunities are available.</p>
+    </section>
+
+    <section class="form-layout">
+      <div class="volunteer-info reveal">
+        <h2>Ways to help</h2>
+        <div class="info-list">
+          <div>
+            <strong>Pickup drivers</strong>
+            <p>Help pick up donated food from local retail and community partners.</p>
+          </div>
+          <div>
+            <strong>Delivery support</strong>
+            <p>Move food to food banks, pantries, and hunger relief partners.</p>
+          </div>
+          <div>
+            <strong>Coordination help</strong>
+            <p>Assist with scheduling, route confirmation, outreach, and follow-up.</p>
+          </div>
+        </div>
+      </div>
+
+      <form class="prototype-form reveal" data-prototype-form>
+        <div class="form-note">Prototype form for future intake. It is not connected yet.</div>
+        <label>
+          Full name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label>
+          Phone
+          <input type="tel" name="phone" autocomplete="tel">
+        </label>
+        <label>
+          Town or area
+          <input type="text" name="area" placeholder="Example: Manchester, Nashua, Merrimack">
+        </label>
+        <label>
+          How would you like to help?
+          <select name="interest">
+            <option value="">Select one</option>
+            <option>Pickup or delivery driver</option>
+            <option>Backup driver</option>
+            <option>Route coordination</option>
+            <option>Retail or pantry outreach</option>
+            <option>General volunteer support</option>
+          </select>
+        </label>
+        <label>
+          Vehicle capacity
+          <select name="capacity">
+            <option value="">Select one</option>
+            <option>Car</option>
+            <option>SUV or wagon</option>
+            <option>Pickup truck</option>
+            <option>Van or box truck</option>
+            <option>Not a driver</option>
+          </select>
+        </label>
+        <label>
+          Notes
+          <textarea name="message" rows="5" placeholder="Availability, preferred area, or questions"></textarea>
+        </label>
+        <button class="button primary full" type="submit">Preview volunteer signup</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>TCF</strong> Tyls Charitable Foundation</p>
+    <p>Volunteer intake will be connected to email or a backend workflow in a future phase.</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
