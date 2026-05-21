@@ -4,11 +4,178 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tyls Charitable Foundation | Food Transportation in Southern NH</title>
-  <meta name="description" content="Tyls Charitable Foundation is building a volunteer-powered food transportation network across southern New Hampshire.">
+  <meta name="description" content="Tyls Charitable Foundation is building a volunteer-powered food transportation network across southern New Hampshire while supporting education and mentoring pathways.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    body {
+      background: #f8efe5;
+    }
+
+    .site-header {
+      background: rgba(248, 239, 229, 0.92);
+      border-bottom-color: rgba(151, 105, 66, 0.16);
+    }
+
+    .home-mosaic-wrap {
+      padding: clamp(22px, 4vw, 48px) clamp(16px, 5vw, 64px) clamp(56px, 7vw, 86px);
+    }
+
+    .hero-mosaic {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: minmax(220px, 34vh) minmax(300px, auto);
+      gap: clamp(14px, 2vw, 22px);
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .mosaic-image,
+    .mosaic-panel {
+      overflow: hidden;
+      border: 1px solid rgba(122, 79, 45, 0.16);
+      border-radius: 18px;
+      box-shadow: 0 22px 60px rgba(72, 46, 28, 0.1);
+    }
+
+    .mosaic-image {
+      min-height: 220px;
+      background-image: url("../site/assets/tcf-banner.png");
+      background-repeat: no-repeat;
+      background-size: 300% 100%;
+    }
+
+    .mosaic-image.left {
+      background-position: left center;
+    }
+
+    .mosaic-image.center {
+      background-position: center center;
+    }
+
+    .mosaic-image.right {
+      background-position: right center;
+    }
+
+    .mosaic-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(24px, 4vw, 38px);
+      background: #fffaf3;
+    }
+
+    .mosaic-panel.left-panel {
+      background: #fff7ec;
+    }
+
+    .mosaic-panel.center-panel {
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #ead8c5;
+    }
+
+    .mosaic-panel.right-panel {
+      align-items: flex-end;
+      text-align: right;
+      color: #1e1711;
+      background: #9b6639;
+    }
+
+    .mosaic-panel .eyebrow,
+    .right-panel .eyebrow {
+      color: #7a4f2d;
+    }
+
+    .mosaic-panel.right-panel p {
+      color: #000000;
+    }
+
+    .mosaic-panel h1,
+    .mosaic-panel h2 {
+      max-width: 430px;
+      margin-bottom: 16px;
+      font-size: clamp(2rem, 3.35vw, 3.4rem);
+      line-height: 1.03;
+      letter-spacing: 0;
+    }
+
+    .mosaic-panel p {
+      max-width: 430px;
+      color: #6f5b4a;
+      font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+    }
+
+    .center-panel strong {
+      display: block;
+      max-width: 300px;
+      color: #3f2c1e;
+      font-size: clamp(1.35rem, 2vw, 2rem);
+      line-height: 1.12;
+    }
+
+    .center-panel span {
+      display: block;
+      max-width: 320px;
+      margin-top: 14px;
+      color: #765f4c;
+      font-weight: 600;
+    }
+
+    .mosaic-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .right-panel .mosaic-actions {
+      justify-content: flex-end;
+    }
+
+    .right-panel .button.secondary,
+    .mosaic-actions .button.secondary {
+      color: #2e2016;
+      background: #f2cc7b;
+    }
+
+    .home-mosaic-wrap .section,
+    .home-mosaic-wrap .cta-section {
+      margin-top: clamp(34px, 6vw, 72px);
+    }
+
+    .home-mosaic-wrap .hero-mosaic + .section {
+      margin-top: clamp(24px, 4vw, 48px);
+    }
+
+    @media (max-width: 900px) {
+      .hero-mosaic {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .mosaic-image {
+        min-height: 0;
+        aspect-ratio: 16 / 9;
+      }
+
+      .mosaic-panel {
+        min-height: 280px;
+      }
+
+      .mosaic-panel.right-panel {
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .right-panel .mosaic-actions {
+        justify-content: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -20,103 +187,73 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="./index.html" aria-current="page">Home</a>
       <a href="./about.html">What We Do</a>
-      <a href="./volunteer.html">Volunteer</a>
-      <a class="nav-cta" href="./donate.html">Donate</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">Southern New Hampshire food logistics</p>
-        <h1>Moving food where it is needed most.</h1>
-        <p class="hero-lede">We help close the transportation gap between local food donors, food banks, and community pantries across southern New Hampshire.</p>
-        <div class="hero-actions">
+  <main class="home-mosaic-wrap">
+    <section class="hero-mosaic" aria-label="Tyls Charitable Foundation mission">
+      <div class="mosaic-image left reveal" role="img" aria-label="Children sharing a meal at a picnic table"></div>
+      <div class="mosaic-image center reveal" role="img" aria-label="Children walking toward school"></div>
+      <div class="mosaic-image right reveal" role="img" aria-label="Graduates walking with diplomas"></div>
+
+      <article class="mosaic-panel left-panel reveal">
+        <div>
+          <p class="eyebrow">Helping today</p>
+          <h1>Moving food where it is needed most.</h1>
+          <p>We help close the transportation gap between local food donors, food banks, and community pantries across southern New Hampshire.</p>
+        </div>
+        <div class="mosaic-actions">
           <a class="button primary" href="./volunteer.html">Volunteer</a>
           <a class="button secondary" href="./donate.html">Donate</a>
         </div>
-      </div>
-      <div class="hero-visual reveal">
-        <img src="./assets/route-network.svg" alt="Illustration of donated food moving from retail pickup to pantry delivery">
-      </div>
-    </section>
+      </article>
 
-    <section class="stats-band reveal" aria-label="New Hampshire hunger facts">
-      <div>
-        <strong>1 in 9</strong>
-        <span>New Hampshire residents face food insecurity</span>
-      </div>
-      <div>
-        <strong>1 in 7</strong>
-        <span>New Hampshire children face food insecurity</span>
-      </div>
-      <div>
-        <strong>20M</strong>
-        <span>pounds distributed by NH Food Bank in 2024</span>
-      </div>
-    </section>
+      <article class="mosaic-panel center-panel reveal">
+        <strong>One foundation, two connected commitments.</strong>
+        <span>Practical support for families now, and pathways that help people keep moving forward.</span>
+      </article>
 
-    <section class="section split">
-      <div class="section-copy reveal">
-        <p class="eyebrow">The missing link</p>
-        <h2>Food can be available and still not move.</h2>
-        <p>Retailers and community partners often have food ready to donate. Food banks and pantries are ready to put it to use. The fragile part is the local pickup: vehicle space, timing, fuel, loading, and reliable drivers.</p>
-      </div>
-      <div class="route-card reveal" aria-label="Food transportation route">
-        <div class="route-step">
-          <span class="route-icon">01</span>
-          <div>
-            <h3>Food donor</h3>
-            <p>Stores and partners identify food ready for donation.</p>
-          </div>
+      <article class="mosaic-panel right-panel reveal">
+        <div>
+          <p class="eyebrow">Building tomorrow</p>
+          <h2>Opportunity for tomorrow</h2>
+          <p>Through education, mentoring, and career-building pathways, TCF helps young people and adults build confidence, skills, and direction.</p>
         </div>
-        <div class="route-line"></div>
-        <div class="route-step">
-          <span class="route-icon">02</span>
-          <div>
-            <h3>TCF pickup</h3>
-            <p>Volunteers help load, transport, and coordinate routes.</p>
-          </div>
+        <div class="mosaic-actions">
+          <a class="button primary" href="./education-volunteer.html">Volunteer</a>
+          <a class="button secondary" href="./education-donate.html">Donate</a>
         </div>
-        <div class="route-line"></div>
-        <div class="route-step">
-          <span class="route-icon">03</span>
-          <div>
-            <h3>Pantry delivery</h3>
-            <p>Food reaches organizations already serving local families.</p>
-          </div>
-        </div>
-      </div>
+      </article>
     </section>
 
     <section class="section">
       <div class="section-heading reveal">
         <p class="eyebrow">Focused and practical</p>
-        <h2>We are starting with the route network.</h2>
+        <h2>Two missions, one purpose: helping people move forward.</h2>
       </div>
       <div class="feature-grid">
         <article class="feature-card reveal">
-          <span>Food is available</span>
-          <h3>Donation programs already work.</h3>
-          <p>Regional retailers and food assistance programs have shown how food can move into the hunger relief network at meaningful scale.</p>
+          <span>Food support</span>
+          <h3>Reliable help for families.</h3>
+          <p>Food relief starts with practical coordination: pickup routes, volunteer drivers, fuel support, and dependable delivery to local partners.</p>
         </article>
         <article class="feature-card reveal">
-          <span>Capacity is limited</span>
-          <h3>One missed pickup matters.</h3>
-          <p>If a driver is unavailable or a load is too large for one vehicle, donated food may not reach the organizations waiting for it.</p>
+          <span>Education</span>
+          <h3>Learning opens doors.</h3>
+          <p>Education support can connect people to business, STEM, skilled trades, and other pathways that turn ambition into opportunity.</p>
         </article>
         <article class="feature-card reveal">
-          <span>TCF fills the gap</span>
-          <h3>Reliable local transportation.</h3>
-          <p>We are building a volunteer-powered logistics layer for southern New Hampshire food pickups and pantry deliveries.</p>
+          <span>Mentoring</span>
+          <h3>Guidance builds confidence.</h3>
+          <p>Mentors, partners, and volunteers can help people navigate choices, build skills, and see a future they may not have pictured yet.</p>
         </article>
       </div>
     </section>
 
     <section class="cta-section reveal">
       <div>
-        <p class="eyebrow">Help build the network</p>
-        <h2>Volunteer time, fuel support, and small donations can move real food.</h2>
+        <p class="eyebrow">Help build the foundation</p>
+        <h2>Volunteer time, fuel support, mentoring, and donations can strengthen both sides of the mission.</h2>
       </div>
       <div class="cta-actions">
         <a class="button primary" href="./volunteer.html">Become a volunteer</a>
@@ -127,7 +264,7 @@
 
   <footer class="site-footer">
     <p><strong>TCF</strong> Tyls Charitable Foundation</p>
-    <p>Building food transportation capacity across southern New Hampshire.</p>
+    <p>Feeding families and building futures across southern New Hampshire.</p>
   </footer>
 
   <script src="./js/main.js"></script>
