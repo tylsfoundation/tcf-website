@@ -456,12 +456,66 @@ h3 {
   padding: clamp(72px, 10vw, 124px) 0 clamp(36px, 6vw, 72px);
 }
 
+.donation-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: clamp(18px, 4vw, 40px);
+  align-items: center;
+}
+
+.donation-hero > div {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.donation-hero h1 {
+  max-width: 680px;
+}
+
 .page-hero.compact {
   padding-bottom: 36px;
 }
 
 .page-hero h1 {
   max-width: 980px;
+}
+
+.qr-card {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  width: 170px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: 0 18px 50px rgba(72, 46, 28, 0.08);
+  text-align: center;
+}
+
+.qr-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.qr-card figcaption {
+  margin-top: 12px;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .donation-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-card {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
+  }
 }
 
 .longform {
