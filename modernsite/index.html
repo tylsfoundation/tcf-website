@@ -26,7 +26,7 @@
     .hero-mosaic {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: minmax(220px, 34vh) minmax(300px, auto);
+      grid-template-rows: minmax(220px, 34vh);
       gap: clamp(14px, 2vw, 22px);
       max-width: 1180px;
       margin: 0 auto;
@@ -155,17 +155,20 @@
 
     @media (max-width: 900px) {
       .hero-mosaic {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-template-rows: auto;
+        gap: 10px;
       }
 
       .mosaic-image {
         min-height: 0;
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 1 / 1;
+        border-radius: 14px;
       }
 
       .mosaic-panel {
-        min-height: 280px;
+        grid-column: 1 / -1;
+        min-height: auto;
       }
 
       .mosaic-panel.right-panel {
@@ -185,10 +188,14 @@
       <span class="brand-mark">TCF</span>
       <span class="brand-text">Tyls Charitable Foundation</span>
     </a>
+    <p class="header-tagline"><span>Two Missions One Purpose</span><span>Helping People Move Forward</span></p>
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="./index.html" aria-current="page">Home</a>
-      <a href="./about.html">What We Do</a>
+      <a href="./contact-us.html">Contact Us</a>
+      <a href="./food-support.html">Food Support</a>
+      <a href="./education-support.html">Education Support</a>
+      <a href="./about-us.html">About Us</a>
     </nav>
   </header>
 
@@ -197,35 +204,6 @@
       <div class="mosaic-image left reveal" role="img" aria-label="Children sharing a meal at a picnic table"></div>
       <div class="mosaic-image center reveal" role="img" aria-label="Children walking toward school"></div>
       <div class="mosaic-image right reveal" role="img" aria-label="Graduates walking with diplomas"></div>
-
-      <article class="mosaic-panel left-panel reveal">
-        <div>
-          <p class="eyebrow">Helping today</p>
-          <h1>Moving food where it is needed most.</h1>
-          <p>We help close the transportation gap between local food donors, food banks, and community pantries across New Hampshire.</p>
-        </div>
-        <div class="mosaic-actions">
-          <a class="button primary" href="./volunteer.html">Volunteer</a>
-          <a class="button secondary" href="./donate.html">Donate</a>
-        </div>
-      </article>
-
-      <article class="mosaic-panel center-panel reveal">
-        <strong>One foundation, two connected commitments.</strong>
-        <span>Practical support for families now, and pathways that help people keep moving forward.</span>
-      </article>
-
-      <article class="mosaic-panel right-panel reveal">
-        <div>
-          <p class="eyebrow">Building tomorrow</p>
-          <h2>Opportunity for tomorrow</h2>
-          <p>Through education, mentoring, and career-building pathways, TCF helps young people and adults build confidence, skills, and direction.</p>
-        </div>
-        <div class="mosaic-actions">
-          <a class="button primary" href="./education-volunteer.html">Volunteer</a>
-          <a class="button secondary" href="./education-donate.html">Donate</a>
-        </div>
-      </article>
     </section>
 
     <section class="section">
@@ -233,40 +211,25 @@
         <p class="eyebrow">Focused and practical</p>
         <h2>Two missions, one purpose: helping people move forward.</h2>
       </div>
-      <div class="feature-grid">
+      <div class="feature-grid home-feature-grid">
         <article class="feature-card reveal">
-          <span>Food support</span>
+          <a class="feature-pill" href="./food-support.html">Food support</a>
           <h3>Reliable help for families.</h3>
           <p>Food relief starts with practical coordination: pickup routes, volunteer drivers, fuel support, and dependable delivery to local partners.</p>
         </article>
         <article class="feature-card reveal">
-          <span>Education</span>
+          <a class="feature-pill" href="./education-support.html">Education</a>
           <h3>Learning opens doors.</h3>
           <p>Education support can connect people to business, STEM, skilled trades, and other pathways that turn ambition into opportunity.</p>
-        </article>
-        <article class="feature-card reveal">
-          <span>Mentoring</span>
-          <h3>Guidance builds confidence.</h3>
           <p>Mentors, partners, and volunteers can help people navigate choices, build skills, and see a future they may not have pictured yet.</p>
         </article>
       </div>
     </section>
 
-    <section class="cta-section reveal">
-      <div>
-        <p class="eyebrow">Help build the foundation</p>
-        <h2>Volunteer time, fuel support, mentoring, and donations can strengthen both sides of the mission.</h2>
-      </div>
-      <div class="cta-actions">
-        <a class="button primary" href="./volunteer.html">Become a volunteer</a>
-        <a class="button dark" href="./about.html">Learn what we do</a>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer">
-    <p><strong>TCF</strong> Tyls Charitable Foundation</p>
-    <p>Feeding families and building futures across New Hampshire.</p>
+    <p class="footer-legal">Copyrighted by the Tyls Foundation. EIN: 33-2773487. Business address: 29 King Rd, Bedford, NH 03110.</p>
   </footer>
 
   <script src="./js/main.js"></script>
