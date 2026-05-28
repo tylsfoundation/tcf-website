@@ -95,11 +95,28 @@ a {
 }
 
 .site-nav {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 70px;
+  right: 18px;
+  left: auto;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
   gap: 8px;
+  width: max-content;
+  max-width: calc(100% - 36px);
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: var(--shadow);
   font-size: 0.78rem;
   font-weight: 700;
+  text-align: right;
+}
+
+.site-nav.is-open {
+  display: flex;
 }
 
 .site-nav a {
@@ -120,7 +137,7 @@ a {
 }
 
 .nav-toggle {
-  display: none;
+  display: inline-flex;
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 9px 13px;
