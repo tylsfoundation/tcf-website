@@ -30,6 +30,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.footer-document {
+  background: transparent;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -746,21 +750,85 @@ textarea:focus {
 }
 
 .site-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 34px clamp(18px, 5vw, 72px);
-  color: var(--muted);
-  border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: minmax(190px, 0.42fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+  width: min(1160px, calc(100% - 36px));
+  margin: 18px auto 0;
+  padding: clamp(24px, 4vw, 38px);
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(21, 32, 28, 0.08);
 }
 
-.site-footer p {
+.footer-include {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
+@media (min-width: 901px) {
+  .footer-include {
+    height: 230px;
+  }
+}
+
+.site-footer p,
+.site-footer h2 {
   margin: 0;
 }
 
+.footer-brand-block,
+.footer-info-block {
+  display: grid;
+  gap: 12px;
+}
+
+.footer-brand-block {
+  justify-items: start;
+}
+
+.footer-mark {
+  display: grid;
+  width: 74px;
+  height: 74px;
+  place-items: center;
+  color: var(--white);
+  background: var(--green-dark);
+  border-radius: 8px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.footer-tagline {
+  color: var(--green-dark);
+  font-size: clamp(1rem, 1.5vw, 1.22rem);
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.footer-tagline span {
+  display: block;
+}
+
+.footer-info-block h2 {
+  color: var(--green-dark);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  line-height: 1.1;
+}
+
+.footer-info-block p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
 .footer-legal {
-  color: rgba(111, 91, 74, 0.68);
-  font-size: 0.76rem;
+  color: rgba(111, 91, 74, 0.72);
+  font-size: 0.8rem;
 }
 
 .reveal {
@@ -870,7 +938,7 @@ textarea:focus {
   .cta-section,
   .placeholder-payment,
   .site-footer {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     align-items: flex-start;
   }
 }

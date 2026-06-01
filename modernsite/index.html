@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css?v=footer-card">
   <style>
     body {
       background: #f8efe5;
@@ -150,7 +150,50 @@
     }
 
     .home-mosaic-wrap .hero-mosaic + .section {
-      margin-top: clamp(24px, 4vw, 48px);
+      width: 100%;
+      max-width: 1180px;
+      margin-top: clamp(12px, 2.5vw, 24px);
+      padding-top: 0;
+    }
+
+    .home-feature-grid .feature-pill {
+      color: #2e2016;
+      background: #f2cc7b;
+      border-color: rgba(122, 79, 45, 0.18);
+    }
+
+    .home-feature-grid .feature-pill:hover {
+      color: #2e2016;
+      background: #f7d98f;
+    }
+
+    .home-mission-card {
+      margin-top: 18px;
+    }
+
+    .home-facts-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 18px;
+    }
+
+    .home-facts-grid,
+    .home-feature-grid,
+    .home-mission-card {
+      width: 100%;
+      max-width: 1180px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .home-fact-card strong {
+      display: block;
+      color: #176b4d;
+      font-size: clamp(1.8rem, 3vw, 3rem);
+      line-height: 1;
+    }
+
+    .home-fact-card p {
+      margin-top: 12px;
     }
 
     @media (max-width: 900px) {
@@ -178,6 +221,24 @@
 
       .right-panel .mosaic-actions {
         justify-content: flex-start;
+      }
+
+      .home-facts-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .home-fact-card {
+        padding: 16px 12px;
+      }
+
+      .home-fact-card strong {
+        font-size: clamp(1.2rem, 4vw, 1.8rem);
+      }
+
+      .home-fact-card p {
+        font-size: 0.82rem;
+        line-height: 1.35;
       }
     }
   </style>
@@ -207,10 +268,6 @@
     </section>
 
     <section class="section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Focused and practical</p>
-        <h2>Two missions, one purpose: helping people move forward.</h2>
-      </div>
       <div class="feature-grid home-feature-grid">
         <article class="feature-card reveal">
           <a class="feature-pill" href="./food-support.html">Food support</a>
@@ -224,13 +281,47 @@
           <p>Mentors, partners, and volunteers can help people navigate choices, build skills, and see a future they may not have pictured yet.</p>
         </article>
       </div>
+      <article class="feature-card home-mission-card reveal">
+        <h3>Beating Food Insecurities</h3>
+        <p>Our mission is to strengthen New Hampshire's food relief network by solving the logistics challenges that prevent donated food from reaching children and families in need. We provide the dedicated coordination and transportation support required to move pallet-sized donations, perishable goods, and surplus food safely and efficiently to local food banks and pantries.</p>
+      </article>
+      <div class="feature-grid home-facts-grid">
+        <article class="feature-card home-fact-card reveal">
+          <strong>1 in 9</strong>
+          <p>New Hampshire residents experience food insecurity.</p>
+        </article>
+        <article class="feature-card home-fact-card reveal">
+          <strong>1 in 7</strong>
+          <p>New Hampshire children experience food insecurity.</p>
+        </article>
+        <article class="feature-card home-fact-card reveal">
+          <strong>20 million</strong>
+          <p>Pounds of food distributed through New Hampshire's food relief network.</p>
+        </article>
+      </div>
+      <article class="feature-card home-mission-card reveal">
+        <h3>Empowering Students</h3>
+        <p>Our mission is to redefine career readiness for modern students by championing elite paths outside the four-year college track. We provide schools with turnkey educational resources, eliminate financial barriers by funding specialized equipment and textbooks, and foster direct mentorship pipelines by connecting students with industry leaders in advanced infrastructure and technology.</p>
+      </article>
+      <div class="feature-grid home-facts-grid">
+        <article class="feature-card home-fact-card reveal">
+          <strong>50%</strong>
+          <p>Hands-on learning can matter more than classroom time.</p>
+        </article>
+        <article class="feature-card home-fact-card reveal">
+          <strong>$109,000+</strong>
+          <p>Possible yearly salaries in non-traditional careers.</p>
+        </article>
+        <article class="feature-card home-fact-card reveal">
+          <strong>82%</strong>
+          <p>Self-employment can provide greater work-life balance.</p>
+        </article>
+      </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <p class="footer-legal">Copyrighted by the Tyls Foundation. EIN: 33-2773487. Business address: Bedford, NH 03110.</p>
-  </footer>
+  <iframe class="footer-include" src="./partials/footer.html?v=footer-card" title="Site footer"></iframe>
 
   <script src="./js/main.js"></script>
 </body>
