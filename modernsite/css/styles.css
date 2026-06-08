@@ -483,6 +483,114 @@ h3 {
   transform: translateY(-1px);
 }
 
+.about-founder-section {
+  padding-top: 18px;
+}
+
+.about-title-section {
+  width: min(1160px, calc(100% - 36px));
+  margin: 0 auto;
+  padding-top: clamp(44px, 7vw, 86px);
+  text-align: center;
+}
+
+.about-title-section h1 {
+  color: var(--green-dark);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 800;
+}
+
+.founder-card,
+.mission-card {
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--paper);
+  box-shadow: 0 18px 50px rgba(21, 32, 28, 0.08);
+}
+
+.founder-card + .founder-card {
+  margin-top: 18px;
+}
+
+.mission-card {
+  margin-bottom: 18px;
+}
+
+.mission-card h2 {
+  margin-bottom: 14px;
+  color: var(--green-dark);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 800;
+}
+
+.mission-card p {
+  max-width: 940px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+}
+
+.board-card {
+  margin-top: 18px;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: var(--paper);
+  box-shadow: 0 18px 50px rgba(21, 32, 28, 0.08);
+  text-align: center;
+}
+
+.board-card h2 {
+  margin-bottom: 20px;
+  color: var(--green-dark);
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 800;
+}
+
+.board-card p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  text-align: left;
+}
+
+.board-card p + p {
+  margin-top: 10px;
+}
+
+.founder-layout {
+  display: block;
+}
+
+.founder-photo {
+  float: left;
+  width: 78px;
+  margin: 0 16px 8px 0;
+}
+
+.founder-photo img {
+  width: 100%;
+  min-height: 109px;
+  aspect-ratio: 93 / 130;
+  object-fit: cover;
+  border-radius: 0;
+  background: var(--mint);
+}
+
+.founder-layout p {
+  max-width: 880px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.founder-layout strong {
+  color: var(--ink);
+  font-size: inherit;
+  font-weight: 800;
+}
+
 .cta-section,
 .placeholder-payment {
   display: flex;
@@ -649,6 +757,13 @@ h3 {
 }
 
 .contact-card a {
+  color: var(--green-dark);
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-email-link {
   color: var(--green-dark);
   font-weight: 800;
   text-decoration: underline;
@@ -929,6 +1044,15 @@ textarea:focus {
   .feature-grid,
   .donate-grid {
     grid-template-columns: 1fr;
+  }
+
+  .founder-layout {
+    display: block;
+  }
+
+  .founder-photo {
+    width: 72px;
+    margin-right: 14px;
   }
 
   .sidebar-card {
