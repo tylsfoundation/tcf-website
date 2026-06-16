@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css?v=footer-card">
+  <link rel="stylesheet" href="./css/styles.css?v=stable-menu">
 </head>
 <body>
   <header class="site-header">
@@ -20,11 +20,32 @@
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="./index.html">Home</a>
-      <a href="./volunteer.html">Volunteer</a>
-      <a href="./contact-us.html">Contact Us</a>
-      <a href="./food-support.html">Food Support</a>
-      <a href="./education-support.html">Education Support</a>
-      <a href="./about-us.html">About Us</a>
+      <details class="nav-group is-current">
+        <summary>Food</summary>
+        <div class="nav-submenu">
+          <a href="./food-support.html">Overview</a>
+          <a href="./food-pickup-in-action.html">Pickup in Action</a>
+          <a href="./volunteer.html">Volunteer</a>
+          <a href="./donate.html" aria-current="page">Donate</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>Education</summary>
+        <div class="nav-submenu">
+          <a href="./education-support.html">Overview</a>
+          <a href="./volunteer.html?source=education">Volunteer</a>
+          <a href="./education-donate.html">Donate</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>About</summary>
+        <div class="nav-submenu">
+          <a href="./about-us.html">About Us</a>
+          <a href="./about.html">What We Do</a>
+          <a href="./current-projects.html">Current Projects</a>
+        </div>
+      </details>
+      <a class="nav-cta" href="./contact-us.html">Contact Us</a>
     </nav>
   </header>
 
@@ -43,8 +64,8 @@
 
   </main>
 
-  <iframe class="footer-include" src="./partials/footer.html?v=footer-card" title="Site footer"></iframe>
+  <iframe class="footer-include" src="./partials/footer.html?v=footer-links-up" title="Site footer"></iframe>
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js?v=volunteer-source"></script>
 </body>
 </html>

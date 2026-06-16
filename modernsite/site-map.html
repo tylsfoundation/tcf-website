@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Education Volunteer | Tyls Charitable Foundation</title>
-  <meta name="description" content="Volunteer with Tyls Charitable Foundation to support education, mentoring, and career-building pathways.">
+  <title>Site Map | Tyls Charitable Foundation</title>
+  <meta name="description" content="Site map for the Tyls Charitable Foundation website.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="./index.html">
+    <a class="brand" href="./index.html" aria-label="Tyls Charitable Foundation home">
       <span class="brand-mark">TCF</span>
       <span class="brand-text">Tyls Charitable Foundation</span>
     </a>
@@ -29,7 +29,7 @@
           <a href="./donate.html">Donate</a>
         </div>
       </details>
-      <details class="nav-group is-current">
+      <details class="nav-group">
         <summary>Education</summary>
         <div class="nav-submenu">
           <a href="./education-support.html">Overview</a>
@@ -50,40 +50,53 @@
   </header>
 
   <main>
-    <section class="page-hero reveal">
-      <p class="eyebrow">Education volunteer</p>
-      <h1>Help someone see the next step.</h1>
-      <p>Education volunteers support mentoring, skills guidance, career conversations, partner outreach, and future-building opportunities for students, young adults, and career changers.</p>
+    <section class="page-hero compact reveal">
+      <h1>Site Map</h1>
+      <p>Use this directory to explore the Tyls Charitable Foundation website.</p>
     </section>
 
-    <section class="form-layout">
-      <div class="volunteer-info reveal">
-        <h2>Ways to help</h2>
-        <div class="info-list">
-          <div>
-            <strong>Mentoring</strong>
-            <p>Offer encouragement, practical advice, and steady guidance as people plan their next move.</p>
-          </div>
-          <div>
-            <strong>Career pathways</strong>
-            <p>Help connect learners with business, STEM, trades, and real-world work opportunities.</p>
-          </div>
-          <div>
-            <strong>Program support</strong>
-            <p>Assist with outreach, scheduling, partner coordination, and education event planning.</p>
-          </div>
-        </div>
-      </div>
+    <section class="sitemap-grid" aria-label="Website pages">
+      <article class="sitemap-card reveal">
+        <h2>Foundation</h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about-us.html">About Us</a></li>
+          <li><a href="./about.html">What We Do</a></li>
+          <li><a href="./current-projects.html">Current Projects</a></li>
+          <li><a href="./contact-us.html">Contact Us</a></li>
+        </ul>
+      </article>
 
-      <div class="prototype-form contact-card reveal">
-        <h2>To volunteer contact us</h2>
-        <p>Email <a href="mailto:founder@tylsfoundation.org">founder@tylsfoundation.org</a> and let us know how you would like to help.</p>
-      </div>
+      <article class="sitemap-card reveal">
+        <h2>Food Support</h2>
+        <ul>
+          <li><a href="./food-support.html">Food Support</a></li>
+          <li><a href="./food-pickup-in-action.html">Food Pickup in Action</a></li>
+          <li><a href="./volunteer.html">Volunteer</a></li>
+          <li><a href="./donate.html">Donate to Food Support</a></li>
+        </ul>
+      </article>
+
+      <article class="sitemap-card reveal">
+        <h2>Education</h2>
+        <ul>
+          <li><a href="./education-support.html">Education Support</a></li>
+          <li><a href="./education-volunteer.html">Education Volunteer</a></li>
+          <li><a href="./education-donate.html">Donate to Education</a></li>
+        </ul>
+      </article>
+
+      <article class="sitemap-card reveal">
+        <h2>Policies</h2>
+        <ul>
+          <li><a href="./privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="./site-map.html" aria-current="page">Site Map</a></li>
+        </ul>
+      </article>
     </section>
   </main>
 
   <iframe class="footer-include" src="./partials/footer.html?v=footer-links-up" title="Site footer"></iframe>
-
   <script src="./js/main.js?v=volunteer-source"></script>
 </body>
 </html>

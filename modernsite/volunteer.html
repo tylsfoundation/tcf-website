@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/styles.css?v=volunteer-form-only">
+  <link rel="stylesheet" href="./css/styles.css?v=stable-menu">
 </head>
 <body>
   <header class="site-header">
@@ -20,15 +20,41 @@
     <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
     <nav class="site-nav" aria-label="Main navigation">
       <a href="./index.html">Home</a>
-      <a href="./volunteer.html" aria-current="page">Volunteer</a>
-      <a href="./contact-us.html">Contact Us</a>
-      <a href="./food-support.html">Food Support</a>
-      <a href="./education-support.html">Education Support</a>
-      <a href="./about-us.html">About Us</a>
+      <details class="nav-group is-current">
+        <summary>Food</summary>
+        <div class="nav-submenu">
+          <a href="./food-support.html">Overview</a>
+          <a href="./food-pickup-in-action.html">Pickup in Action</a>
+          <a href="./volunteer.html" aria-current="page">Volunteer</a>
+          <a href="./donate.html">Donate</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>Education</summary>
+        <div class="nav-submenu">
+          <a href="./education-support.html">Overview</a>
+          <a href="./volunteer.html?source=education">Volunteer</a>
+          <a href="./education-donate.html">Donate</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>About</summary>
+        <div class="nav-submenu">
+          <a href="./about-us.html">About Us</a>
+          <a href="./about.html">What We Do</a>
+          <a href="./current-projects.html">Current Projects</a>
+        </div>
+      </details>
+      <a class="nav-cta" href="./contact-us.html">Contact Us</a>
     </nav>
   </header>
 
   <main>
+    <section class="page-hero compact volunteer-intro">
+      <p class="eyebrow">Volunteer with TCF</p>
+      <h1>Help move practical support through New Hampshire communities.</h1>
+      <p>Volunteer drivers and community helpers make dependable food pickups possible. Use the form below to tell us about your availability, vehicle, location, and the ways you would like to help. A member of TCF will follow up about opportunities that fit.</p>
+    </section>
     <section class="section volunteer-form-section">
       <div class="prototype-form volunteer-form-card reveal">
         <div class="google-form-crop">
@@ -38,8 +64,8 @@
     </section>
   </main>
 
-  <iframe class="footer-include" src="./partials/footer.html?v=footer-card" title="Site footer"></iframe>
+  <iframe class="footer-include" src="./partials/footer.html?v=footer-links-up" title="Site footer"></iframe>
 
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js?v=volunteer-source"></script>
 </body>
 </html>
