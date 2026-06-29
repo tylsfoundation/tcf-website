@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" role="img" aria-labelledby="title">
+  <title id="title">If Walls Could Talk</title>
+  <rect width="640" height="240" rx="28" fill="#fffaf3"/>
+  <rect x="24" y="24" width="592" height="192" rx="22" fill="none" stroke="#176b4d" stroke-width="10"/>
+  <path d="M104 162V82h18v80zm58 0V82h58v16h-40v18h35v16h-35v30zm96 0V82h18v64h38v16zm83 0V82h18v64h38v16zm83 0V82h18v80z" fill="#176b4d"/>
+  <text x="320" y="126" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800" fill="#1e1711">If Walls Could Talk</text>
+  <text x="320" y="166" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#6f5b4a">Community Partner</text>
+</svg>

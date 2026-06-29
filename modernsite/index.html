@@ -167,6 +167,14 @@
       background: #f7d98f;
     }
 
+    .home-card-action {
+      width: fit-content;
+      min-height: 34px;
+      margin-top: 2px;
+      padding: 0 13px;
+      font-size: 0.78rem;
+    }
+
     .home-mission-card {
       margin-top: 18px;
     }
@@ -240,6 +248,10 @@
         font-size: 0.82rem;
         line-height: 1.35;
       }
+
+      .home-card-action {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -254,28 +266,33 @@
     <nav class="site-nav" aria-label="Main navigation">
       <a href="./index.html" aria-current="page">Home</a>
       <details class="nav-group">
-        <summary>Food</summary>
+        <summary>Food Logistics</summary>
         <div class="nav-submenu">
           <a href="./food-support.html">Overview</a>
-          <a href="./food-pickup-in-action.html">Pickup in Action</a>
-          <a href="./volunteer.html">Volunteer</a>
-          <a href="./donate.html">Donate</a>
+          <a href="./food-pickup-in-action.html">Logistics in Action</a>
+          <a href="./food-partners.html">Our Partners</a>
         </div>
       </details>
       <details class="nav-group">
-        <summary>Education</summary>
+        <summary>Educational Initiatives</summary>
         <div class="nav-submenu">
           <a href="./education-support.html">Overview</a>
-          <a href="./volunteer.html?source=education">Volunteer</a>
-          <a href="./education-donate.html">Donate</a>
+          <a href="./education-programs.html">Programs</a>
+        </div>
+      </details>
+      <details class="nav-group">
+        <summary>Get Involved</summary>
+        <div class="nav-submenu">
+          <a href="./volunteer.html">Volunteer</a>
+          <a href="./food-donate.html">Donate - Food Support</a>
+          <a href="./education-donate.html">Donate - Education Initiatives</a>
         </div>
       </details>
       <details class="nav-group">
         <summary>About</summary>
         <div class="nav-submenu">
-          <a href="./about-us.html">About Us</a>
-          <a href="./about.html">What We Do</a>
-          <a href="./current-projects.html">Current Projects</a>
+          <a href="./our-board.html">Our Board</a>
+          <a href="./founders-message.html">Founders Message</a>
         </div>
       </details>
       <a class="nav-cta" href="./contact-us.html">Contact Us</a>
@@ -292,15 +309,15 @@
     <section class="section">
       <div class="feature-grid home-feature-grid">
         <article class="feature-card reveal">
-          <a class="feature-pill" href="./food-support.html">Food support</a>
           <h3>Reliable help for families.</h3>
           <p>Food relief starts with practical coordination: pickup routes, volunteer drivers, fuel support, and dependable delivery to local partners.</p>
+          <a class="button secondary home-card-action" href="./food-support.html">More Information</a>
         </article>
         <article class="feature-card reveal">
-          <a class="feature-pill" href="./education-support.html">Education</a>
           <h3>Learning opens doors.</h3>
           <p>Education support can connect people to business, STEM, skilled trades, and other pathways that turn ambition into opportunity.</p>
           <p>Mentors, partners, and volunteers can help people navigate choices, build skills, and see a future they may not have pictured yet.</p>
+          <a class="button secondary home-card-action" href="./education-support.html">More Information</a>
         </article>
       </div>
       <article class="feature-card home-mission-card reveal">
@@ -343,7 +360,7 @@
 
   </main>
 
-  <iframe class="footer-include" src="./partials/footer.html?v=footer-links-up" title="Site footer"></iframe>
+  <iframe class="footer-include" src="./partials/footer.html?v=footer-social" title="Site footer"></iframe>
 
   <script src="./js/main.js?v=volunteer-source"></script>
 </body>

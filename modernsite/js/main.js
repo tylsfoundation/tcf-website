@@ -3,19 +3,6 @@ const siteNav = document.querySelector(".site-nav");
 if (navToggle && siteNav) {
   const navGroups = Array.from(siteNav.querySelectorAll(".nav-group"));
 
-  const volunteerSource = new URLSearchParams(window.location.search).get("source");
-  if (window.location.pathname.endsWith("/volunteer.html") && volunteerSource === "education") {
-    siteNav.querySelectorAll(".nav-group").forEach((group) => group.classList.remove("is-current"));
-    siteNav.querySelectorAll("[aria-current='page']").forEach((link) => link.removeAttribute("aria-current"));
-
-    const educationGroup = navGroups.find((group) => group.querySelector("summary")?.textContent.trim() === "Education");
-    const educationVolunteerLink = educationGroup?.querySelector("a[href='./volunteer.html?source=education']");
-    if (educationGroup && educationVolunteerLink) {
-      educationGroup.classList.add("is-current");
-      educationVolunteerLink.setAttribute("aria-current", "page");
-    }
-  }
-
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("is-open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
@@ -32,7 +19,7 @@ if (navToggle && siteNav) {
   });
 
   siteNav.addEventListener("click", (event) => {
-    if (event.target.closest("a") && window.innerWidth <= 1120) {
+    if (event.target.closest("a") && window.innerWidth <= 1250) {
       siteNav.classList.remove("is-open");
       navToggle.setAttribute("aria-expanded", "false");
     }
