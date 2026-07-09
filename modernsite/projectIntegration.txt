@@ -1,0 +1,141 @@
+Project Integration Notes
+
+Goal:
+Update the volunteer page so volunteer form submissions are sent to an n8n webhook. The workflow should save the submitted data in PostgreSQL and send an email notification to the founder.
+
+Important Scope Note:
+The donation page will be handled separately. Do not include payment processing, donation checkout, or credit card handling in this volunteer workflow.
+
+Recommended Architecture:
+volunteer form -> secure n8n webhook -> PostgreSQL -> founder email notification
+
+Main Components:
+- Volunteer form on the website
+- Client-side form validation
+- Secure n8n webhook endpoint
+- PostgreSQL database for volunteer submissions
+- Email provider or SMTP service for founder notifications
+- Google Cloud Run or another container platform for n8n
+- Google Cloud SQL for PostgreSQL
+- Google Secret Manager for credentials and webhook secrets
+- Git branch dedicated to volunteer workflow integration
+
+Volunteer Data To Define:
+Before building, decide which fields the volunteer form should collect. Possible fields:
+- first name
+- last name
+- email
+- phone
+- city/town
+- volunteer interest area
+- availability
+- vehicle availability, if food logistics is involved
+- message/comments
+- consent checkbox
+- submission timestamp
+- source page
+
+Database Design:
+Create a PostgreSQL table for volunteer submissions. Suggested table:
+
+volunteer_submissions
+- id
+- first_name
+- last_name
+- email
+- phone
+- city
+- interest_area
+- availability
+- has_vehicle
+- message
+- consent_given
+- source_page
+- submitted_at
+- email_sent_at
+- workflow_status
+- error_message
+
+Webhook Security:
+Do not expose an unprotected public n8n webhook. Add security such as:
+- secret token or request signature
+- server-side validation inside n8n
+- spam protection or CAPTCHA
+- honeypot field
+- rate limiting where possible
+- logging rejected or failed submissions
+
+Email Notification:
+Decide how n8n will send email. Options include:
+- Google Workspace SMTP
+- SendGrid
+- Mailgun
+- Postmark
+- another transactional email provider
+
+The email to the founder should include:
+- volunteer name
+- email
+- phone
+- location
+- selected interest area
+- availability
+- message/comments
+- timestamp
+
+Environment Separation:
+Use separate development and production settings:
+- local development branch
+- development n8n environment
+- development PostgreSQL database
+- production environment later
+- separate secrets for development and production
+
+Google Cloud Setup:
+Required Google Cloud pieces:
+- Google Cloud project with billing enabled
+- gcloud CLI authenticated locally
+- Artifact Registry for container images
+- Cloud Run service for n8n or supporting webhook service
+- Cloud SQL PostgreSQL instance
+- Secret Manager secrets
+- IAM service account permissions
+- Cloud SQL connection configuration for Cloud Run
+
+Repo Structure:
+Possible structure:
+
+modernsite/
+  volunteer.html
+  js/volunteer-form.js
+
+infra/
+  cloudrun/
+  terraform/ or deploy scripts
+
+n8n/
+  workflows/
+  docker-compose.yml or cloud-run-notes.md
+
+Privacy And Compliance:
+Because this collects volunteer contact information, update:
+- privacy policy
+- data retention language
+- consent language on the volunteer form
+- internal access rules for who can view volunteer submissions
+
+Recommended Git Branch:
+volunteer-workflow-integration
+
+Suggested Build Phases:
+1. Replace or update the volunteer page form.
+2. Add client-side validation.
+3. Create a local mock webhook for testing.
+4. Design and create the PostgreSQL schema.
+5. Build the n8n webhook workflow.
+6. Connect n8n to PostgreSQL.
+7. Configure founder email notification.
+8. Add webhook security.
+9. Deploy n8n or supporting services to Google Cloud.
+10. Test end-to-end in development.
+11. Update privacy and consent language before production use.
