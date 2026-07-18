@@ -645,6 +645,27 @@ h3 {
   font-weight: 800;
 }
 
+.founder-video-block {
+  width: min(1100px, calc(100vw - 36px));
+  margin: clamp(24px, 4vw, 40px) auto 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: #000;
+  box-shadow: 0 18px 50px rgba(21, 32, 28, 0.12);
+}
+
+.founder-video-block iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .founder-card,
 .mission-card {
   padding: clamp(24px, 4vw, 42px);
