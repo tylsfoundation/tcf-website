@@ -69,3 +69,32 @@ if (prototypeForm) {
     }
   });
 }
+
+const contactForm = document.querySelector("[data-contact-form]");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = contactForm.querySelector("button[type=submit]");
+    const status = contactForm.querySelector(".form-status");
+    if (submitButton) submitButton.disabled = true;
+    if (status) status.textContent = "Sending your message...";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      });
+
+      if (!response.ok) throw new Error("Form submission failed");
+      contactForm.reset();
+      if (status) status.textContent = "Thanks. Your message has been sent.";
+    } catch (error) {
+      if (status) status.textContent = "We could not send your message. Please email founder@tylsfoundation.org instead.";
+    } finally {
+      if (submitButton) submitButton.disabled = false;
+    }
+  });
+}

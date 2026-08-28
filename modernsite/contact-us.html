@@ -58,12 +58,60 @@
     <section class="page-hero compact reveal">
       <p class="eyebrow">Contact us</p>
       <h1>Reach Tyls Charitable Foundation.</h1>
-      <p>Email <a class="contact-email-link" href="mailto:founder@tylsfoundation.org">founder@tylsfoundation.org</a> for volunteer, donation, partnership, or general foundation questions.</p>
+      <p>Tell us how we can help with volunteer, donation, partnership, or general foundation questions.</p>
+    </section>
+
+    <section class="form-layout reveal">
+      <div class="volunteer-info">
+        <p class="eyebrow">Send a message</p>
+        <h2>Let's start a conversation.</h2>
+        <p>Complete the form and our team will review your message. We usually respond within 3-5 business days.</p>
+        <p class="form-note">Please do not include sensitive personal information.</p>
+        <p>Prefer email? Contact <a class="contact-email-link" href="mailto:founder@tylsfoundation.org">founder@tylsfoundation.org</a> directly.</p>
+      </div>
+
+      <form class="prototype-form" action="https://formspree.io/f/mqpkkwek" method="POST" data-contact-form>
+        <input type="hidden" name="_subject" value="New TCF website contact">
+
+        <label for="name">
+          Name
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </label>
+
+        <label for="email">
+          Email
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </label>
+
+        <label for="phone">
+          Phone <span>(optional)</span>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </label>
+
+        <label for="topic">
+          Reason for contacting us
+          <select id="topic" name="topic" required>
+            <option value="">Select one</option>
+            <option value="Volunteer">Volunteer</option>
+            <option value="Donation">Donation</option>
+            <option value="Partnership">Partnership</option>
+            <option value="General question">General question</option>
+          </select>
+        </label>
+
+        <label for="message">
+          Message
+          <textarea id="message" name="message" rows="7" required></textarea>
+        </label>
+
+        <button class="button primary" type="submit">Send message</button>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
   <iframe class="footer-include" src="./partials/footer.html?v=footer-social" title="Site footer"></iframe>
 
-  <script src="./js/main.js?v=volunteer-source"></script>
+  <script src="./js/main.js?v=contact-ajax"></script>
 </body>
 </html>
