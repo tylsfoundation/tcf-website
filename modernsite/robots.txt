@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /partials/
+Disallow: /content-review/
+Disallow: /projectIntegration.txt
+Disallow: /notes.txt
+
+Sitemap: https://tylsfoundation.org/sitemap.xml
