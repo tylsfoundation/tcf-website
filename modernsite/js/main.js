@@ -73,6 +73,32 @@ if (prototypeForm) {
 const contactForm = document.querySelector("[data-contact-form]");
 
 if (contactForm) {
+  const contactTopic = contactForm.querySelector("#topic");
+  const subjectInput = contactForm.querySelector('input[name="_subject"]');
+  const topicSubjects = {
+    partnership: "TCF Website - Partnership Inquiry",
+    "food-volunteer": "TCF Website - Food Logistics Volunteer",
+    "education-volunteer": "TCF Website - Education Volunteer",
+    "food-assistance": "TCF Website - Food Assistance Request",
+    "education-assistance": "TCF Website - Education Assistance Request",
+    donation: "TCF Website - Donation Question",
+    general: "TCF Website - General Question"
+  };
+
+  const updateContactSubject = () => {
+    if (!subjectInput) return;
+    subjectInput.value = topicSubjects[contactTopic?.value] || "New TCF website contact";
+  };
+
+  if (contactTopic) {
+    const requestedTopic = new URLSearchParams(window.location.search).get("topic");
+    if (requestedTopic && Object.prototype.hasOwnProperty.call(topicSubjects, requestedTopic)) {
+      contactTopic.value = requestedTopic;
+    }
+    contactTopic.addEventListener("change", updateContactSubject);
+    updateContactSubject();
+  }
+
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -90,6 +116,7 @@ if (contactForm) {
 
       if (!response.ok) throw new Error("Form submission failed");
       contactForm.reset();
+      updateContactSubject();
       if (status) status.textContent = "Thanks. Your message has been sent.";
     } catch (error) {
       if (status) status.textContent = "We could not send your message. Please email founder@tylsfoundation.org instead.";
