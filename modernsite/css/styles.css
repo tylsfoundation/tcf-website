@@ -1298,6 +1298,19 @@ h3 {
   place-items: center;
 }
 
+.partner-logo-link {
+  display: grid;
+  width: 100%;
+  min-height: 150px;
+  place-items: center;
+}
+
+.partner-logo-link:focus-visible {
+  border-radius: 12px;
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
 .partner-logo-card img {
   width: min(100%, 220px);
   max-height: 110px;
